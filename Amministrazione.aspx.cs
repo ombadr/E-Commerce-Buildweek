@@ -34,7 +34,7 @@ namespace BuildWeekMattia
     public partial class Amministrazione : System.Web.UI.Page
     {
 
-        static string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ToString();
+        static string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         SqlConnection conn = new SqlConnection(connectionString);
         public static List<Articolo> allValues = new List<Articolo>();
         protected void Page_Load(object sender, EventArgs e)

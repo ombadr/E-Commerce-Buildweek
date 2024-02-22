@@ -21,7 +21,7 @@ namespace BuildWeekMattia
 
         private void CaricaOrdini()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();

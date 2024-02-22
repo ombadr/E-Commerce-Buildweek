@@ -11,7 +11,7 @@ namespace BuildWeekMattia
 {
     public partial class BackOfficeDetails : System.Web.UI.Page
     {
-        static string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ToString();
+        static string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         SqlConnection conn = new SqlConnection(connectionString);
         protected void Page_Load(object sender, EventArgs e)
         {

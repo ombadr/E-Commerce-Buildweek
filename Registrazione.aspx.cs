@@ -28,7 +28,7 @@ namespace E_Commerce_Epicode_Buildweek
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
-            string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             string query = "INSERT INTO Utenti (Nome, Cognome, Email, Password, TipoUtente) VALUES (@Nome, @Cognome, @Email, @Password, 'user'); SELECT SCOPE_IDENTITY();";
 

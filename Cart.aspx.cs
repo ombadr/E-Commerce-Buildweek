@@ -12,7 +12,7 @@ namespace BuildWeekMattia
 {
     public partial class Cart : System.Web.UI.Page
     {
-        static string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ToString();
+        static string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         SqlConnection conn = new SqlConnection(connectionString);
         List<Articolo> carrello = new List<Articolo>();
 
@@ -34,7 +34,7 @@ namespace BuildWeekMattia
                     totcarrello += totale;
                     Button btnRemove = new Button
                     {
-                        CssClass = "btn btn-primary",
+                        CssClass = "btnGlowLab",
                         Text = "Rimuovi",
                         CommandArgument = articolo.Id.ToString()
                     };
@@ -43,25 +43,23 @@ namespace BuildWeekMattia
                
                     LiteralControl lc = new LiteralControl(
                         $@"<div class=""row"">
-                    <div class=""d-flex"">
-                        <div class=""col d-flex"">
-                            <img style=""width: 100px; height: 120px;"" src=""{articolo.Immagine}"" />
+                    <div class=""d-flex justify-content-evenly"">
+                        <div class=""col-4 imgCard"">
+                            <img style=""width: 160px; height: 180px;"" src=""{articolo.Immagine}"" />
+                        </div>
+                        <div class=""col-5"">
                             <label class=""form-control"">{articolo.Nome}</label>
-                        </div>
-                        <div class=""col"">
                             <label class=""form-control"">Prezzo unitario: {articolo.Prezzo}</label>
-                        </div>
-                        <div class=""col"">
                             <label class=""form-control"">Quantità:{prodotti.Quant}</label>
-                        </div>
-                        <div class=""col"">
                             <label class=""form-control"">Prezzo Tot:{totale}</label>
                         </div>
+                        
                     </div>
                 </div>");
-
-                    Panel1.Controls.Add(lc);
+                    
                     Panel1.Controls.Add(btnRemove);
+                    Panel1.Controls.Add(lc);
+                   
                 }
                 conn.Close();
             }
@@ -73,7 +71,7 @@ namespace BuildWeekMattia
       
             Button confirmCart = new Button
             {
-                CssClass = "btn btn-primary",
+                CssClass = "btnGlowLab",
                 Text = "Conferma Carrello",
             };
             confirmCart.Click += ConfirmCart;
