@@ -23,6 +23,7 @@
                         <a class="navbar-brand" href="HomePage.aspx">GlowLab</a>
                         <div>
                             <asp:Label ID="lblUsername" runat="server" Text="Label" CssClass="mx-3 fw-bold"></asp:Label>
+                            <asp:LinkButton ID="amministrazioneLink" runat="server" CssClass="btnGlowLab me-2" OnClick="Amministrazione_Click">Amministrazione</asp:LinkButton>
                             <asp:LinkButton ID="carrelloLink" runat="server" CssClass="btnGlowLab me-2" OnClick="Carrello_Click">Carrello</asp:LinkButton>
                             <asp:LinkButton ID="storicoLink" runat="server" CssClass="btnGlowLab me-2" OnClick="Storico_Click">Storico Ordini</asp:LinkButton>
                             <asp:LinkButton ID="loginLink" runat="server" CssClass="btnGlowLab me-5" OnClick="Login_Click">Login</asp:LinkButton>
