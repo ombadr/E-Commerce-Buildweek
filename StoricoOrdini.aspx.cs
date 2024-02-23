@@ -47,7 +47,7 @@ namespace BuildWeekMattia
                             if (currentOrderId != 0)
                             {
                                
-                                htmlContent += $@"<h3 class=""text-end"">Totale : {orderTotal}</h3></div></div>";
+                                htmlContent += $@"<h3 class=""text-end"">Totale : {orderTotal}&euro;</h3></div></div>";
                                 orderTotal = 0; 
                             }
 
