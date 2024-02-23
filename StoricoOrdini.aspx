@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/BaseTemplate.Master" AutoEventWireup="true" CodeBehind="StoricoOrdini.aspx.cs" Inherits="BuildWeekMattia.StoricoOrdini" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+            <link rel="stylesheet" href="StoricoOrdini.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <%-- <div id="idordine" runat="server"></div>

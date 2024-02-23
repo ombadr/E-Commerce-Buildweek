@@ -42,7 +42,7 @@
                     </div>
                     <div class="col">
                         <div style="height: 210px;" id="Pricetxt" class="form-control">
-                            <%# Eval("Prezzo")+"€" %>
+                            <%# Eval("Prezzo")+ "€" %>
                         </div>
                     </div>
 
@@ -61,7 +61,7 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Aggiungi Articolo</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body mdlGlowLab">
                 <div class="d-flex">
                     <p style="width: 120px;">Nome Prodotto:</p>
                     <asp:TextBox ID="TextBoxNome" runat="server"></asp:TextBox>
@@ -83,8 +83,8 @@
                     <asp:TextBox ID="TextBoxImg" runat="server"></asp:TextBox>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <asp:Button runat="server" ID="SaveChanges" OnClick="SaveChanges_Click" class="btn btn-primary" Text="Save Changes"></asp:Button>
+                    <button type="button" class="btnGlowLab" data-bs-dismiss="modal">Close</button>
+                    <asp:Button runat="server" ID="SaveChanges" OnClick="SaveChanges_Click" class="btnGlowLab" Text="Save Changes"></asp:Button>
                 </div>
             </div>
         </div>

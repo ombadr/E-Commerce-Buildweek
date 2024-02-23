@@ -49,10 +49,11 @@ namespace BuildWeekMattia
                         </div>
                         <div class=""col-5"">
                             <label class=""form-control"">{articolo.Nome}</label>
-                            <label class=""form-control"">Prezzo unitario: {articolo.Prezzo}</label>
+                            <label class=""form-control"">Prezzo unitario: {articolo.Prezzo}&euro;</label>
                             <label class=""form-control"">Quantità:{prodotti.Quant}</label>
-                            <label class=""form-control"">Prezzo Tot:{totale}</label>
+                            <label class=""form-control"">Prezzo Tot:{totale}&euro;</label>
                         </div>
+                         
                         
                     </div>
                 </div>");

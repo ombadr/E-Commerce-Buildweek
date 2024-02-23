@@ -33,8 +33,13 @@
 
         </div>
 
+        <div class="m-4">
+
         <asp:Button ID="Mod" runat="server" Text="Modifica" CommandName="Mod" class="btnGlowLab" CommandArgument='' OnClick="Mod_Click" />
         <asp:Button ID="DelBtn" runat="server" Text="Rimuovi" UseSubmitBehavior="false" CommandName="Delete" class="btnGlowLab" CommandArgument='' OnClick="DelBtn_Click" />
+        <asp:Button ID="BackToAdminBtn" runat="server" Text="Torna indietro" OnClick="BackToAdminBtn_Click" CssClass="btnGlowLab" />
+
+        </div>
 
 
     </div>

@@ -88,8 +88,6 @@ nav {
     font-size: 18px;
 }
 
-.mdlGlowLab {
-    background: rgb(209, 21, 205) !important;
-    background: linear-gradient(219deg, rgba(209, 21, 205, 0.720500700280112) 10%, rgba(219, 118, 217, 1) 25%, rgba(242, 186, 237, 0.25271358543417366) 56%) !important;
-    background-repeat: no-repeat !important;
+li {
+    list-style-type: none;
 }

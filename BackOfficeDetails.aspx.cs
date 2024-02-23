@@ -63,5 +63,11 @@ namespace BuildWeekMattia
             conn.Close();
 
         }
+
+        protected void BackToAdminBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Amministrazione.aspx");
+        }
+
     }
 }

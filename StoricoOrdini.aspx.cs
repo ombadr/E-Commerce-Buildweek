@@ -52,7 +52,7 @@ namespace BuildWeekMattia
                             }
 
                          
-                            htmlContent += $@"<div class=""row border border-2 rounded-4 mb-3"">
+                            htmlContent += $@"<div class=""row border border-2 rounded-4 m-3"">
                                         <div class=""col-12"">
                                             <h2 class='text-center'>Numero Ordine: {orderId}</h2>
                                             <p>Dettagli: </p>
@@ -61,17 +61,36 @@ namespace BuildWeekMattia
                             currentOrderId = orderId;
                         }
 
+                        string imageUrl = reader.GetString(reader.GetOrdinal("Immagine"));
                         string productName = reader.GetString(10);
                         int quantity = reader.GetInt32(reader.GetOrdinal("Quant"));
                         decimal price = reader.GetInt32(reader.GetOrdinal("Prezzo"));
-                        orderTotal += quantity * price; 
+                        orderTotal += quantity * price;
 
-                        htmlContent += $"<li>{productName} - Quantità: {quantity} - Prezzo {price}</li>";
+                        htmlContent += $@"<li>
+                    <div class='row align-items-center justify-content-around m-2'>
+                        <div class='col-3'>
+                            <div class='imgCard'>
+                                <img src='{imageUrl}' alt='{productName}' style='width: 100px; height: 120px; margin-right: 10px;' />
+                            </div>
+                        </div>
+                        <div class='col-3'>
+                            <div>{productName}</div>
+                            <div>Quantità: {quantity}</div>
+                            <div>Prezzo: {price}&euro;</div>
+                        </div>
+                    </div>
+                </li>";
+
+
+
+
+
                     }
 
                     if (currentOrderId != 0)
                     {
-                        htmlContent += $@"<h3 class=""text-end"">Totale : {orderTotal}</h3></div></div>";
+                        htmlContent += $@"<h3 class=""text-end"">Totale : {orderTotal}&euro;</h3></div></div>";
                     }
 
                     ordersContainer.InnerHtml = htmlContent; 
