@@ -25,7 +25,7 @@ namespace E_Commerce_Epicode_Buildweek
             string email = Request.Form["indirizzoEmail"];
             string password = Request.Form["passwordUtente"];
 
-            string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

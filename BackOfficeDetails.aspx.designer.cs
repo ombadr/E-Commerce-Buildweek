@@ -85,5 +85,14 @@ namespace BuildWeekMattia
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button DelBtn;
+
+        /// <summary>
+        /// Controllo BackToAdminBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BackToAdminBtn;
     }
 }

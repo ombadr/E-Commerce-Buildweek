@@ -66,7 +66,7 @@ namespace E_Commerce_Epicode_Buildweek
         protected void Page_Load(object sender, EventArgs e)
         {
             allValues.Clear();
-            string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ToString();
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Prodotto", conn);

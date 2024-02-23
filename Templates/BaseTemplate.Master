@@ -4,28 +4,31 @@
 
 <html>
 <head runat="server">
-    <title>E-Commerce</title>
+    <title>GlowLab</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/bootstrap.min.js">  </script>
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
     <form id="form1" runat="server">
         <header>
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav>
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="HomePage.aspx">E-Commerce</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-                        <asp:Label ID="lblUsername" runat="server" Text="Label" CssClass="mx-3 fw-bold"></asp:Label>
-                        <asp:LinkButton ID="carrelloLink" runat="server"  CssClass="btn btn-outline-success me-2" OnClick="Carrello_Click">Carrello</asp:LinkButton>
-                        <asp:LinkButton ID="storicoLink" runat="server"  CssClass="btn btn-outline-success me-2" OnClick="Storico_Click">Storico Ordini</asp:LinkButton>
-                        <asp:LinkButton ID="loginLink" runat="server" CssClass="btn btn-outline-success me-5" OnClick="Login_Click">Login</asp:LinkButton>
-                        <asp:LinkButton ID="logoutLink" runat="server" CssClass="btn btn-success me-5" OnClick="Logout_Click">Logout</asp:LinkButton>
+
+                    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+                        <a class="navbar-brand" href="HomePage.aspx">GlowLab</a>
+                        <div>
+                            <asp:Label ID="lblUsername" runat="server" Text="Label" CssClass="mx-3 fw-bold"></asp:Label>
+                            <asp:LinkButton ID="amministrazioneLink" runat="server" CssClass="btnGlowLab me-2" OnClick="Amministrazione_Click">Amministrazione</asp:LinkButton>
+                            <asp:LinkButton ID="carrelloLink" runat="server" CssClass="btnGlowLab me-2" OnClick="Carrello_Click">Carrello</asp:LinkButton>
+                            <asp:LinkButton ID="storicoLink" runat="server" CssClass="btnGlowLab me-2" OnClick="Storico_Click">Storico Ordini</asp:LinkButton>
+                            <asp:LinkButton ID="loginLink" runat="server" CssClass="btnGlowLab me-5" OnClick="Login_Click">Login</asp:LinkButton>
+                            <asp:LinkButton ID="logoutLink" runat="server" CssClass="btnGlowLab me-5" OnClick="Logout_Click">Logout</asp:LinkButton>
+                        </div>
 
                     </div>
                 </div>
@@ -40,11 +43,32 @@
             </div>
         </main>
     </form>
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted fw-bold">E-Commerce - Epicode</span>
-        </div>
+
+    <footer>
+        <p>© 2024 GlowLab - Tutti i diritti riservati</p>
+        <p>
+            <a href="#contatti">Contatti</a> |
+            <a href="#chi-siamo">Chi Siamo</a> |
+            <a href="#privacy">Politica sulla Privacy</a> |
+            <a href="#termini">Termini e Condizioni</a>
+        </p>
+        <p>
+            Seguici su:
+            <a href="https://www.instagram.com/glowlab" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/glowlab" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <a href="https://twitter.com/glowlab" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+        </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 </html>

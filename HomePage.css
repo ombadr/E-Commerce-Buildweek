@@ -1,0 +1,160 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Curgette&display=swap');
+
+body {
+    background: rgb(209, 21, 205);
+    background: linear-gradient(219deg, rgba(209, 21, 205, 0.720500700280112) 10%, rgba(219, 118, 217, 1) 25%, rgba(242, 186, 237, 0.25271358543417366) 56%);
+    background-repeat: no-repeat;
+    font-family: "Courgette", cursive;
+}
+
+main {
+    margin-top: 5em;
+    padding: 2em;
+    font-family: "Courgette", cursive;
+}
+
+.hero {
+    width: 100%;
+    height: 25em;
+    background-image: url(https://cdn.shopify.com/s/files/1/0643/1739/1084/files/AdobeStock_502785410.jpg?v=1667226155&width=1500);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0.3em;
+}
+
+.cardContainer {
+    font-family: "Courgette", cursive;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.card {
+    width: 15rem;
+    height: 18rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 30px) calc(100% - 30px) no-repeat, linear-gradient(122deg, rgba(67,15,203,0.54) 1%, rgba(153,21,206,0.55) 29%, rgba(209,21,205,0.53) 57%, rgba(219,118,217,0.56) 78%, rgba(242,186,237,0.79) 98%);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 1em;
+}
+
+    .card a {
+        color: black !important;
+    }
+
+    .card img {
+        width: 10em;
+        height: 10em;
+        background-color: white;
+    }
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(239, 191, 238, 0.66);
+    color: white;
+    padding: 18px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none !important;
+    color: rgb(209, 21, 205) !important;
+    transition: font-size 0.3s !important;
+}
+
+    a:hover {
+        cursor: pointer;
+        font-size: 1.1em;
+    }
+
+footer {
+    text-align: center;
+}
+
+.btnGlowLab {
+    align-self: center;
+    background-color: rgba(209, 21, 206, 0.432);
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: black !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    padding: 0.3em;
+}
+
+    .btnGlowLab:hover {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+        transform: translate3d(0, 2px, 0);
+    }
+
+    .btnGlowLab:focus {
+        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    }
+
+nav {
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+    backdrop-filter: blur(8px) brightness(1.2);
+    -webkit-backdrop-filter: blur(8px) brightness(1.2);
+    font-size: 18px;
+}
+
+    nav.is-hidden {
+        transform: translateY(-100%);
+    }
