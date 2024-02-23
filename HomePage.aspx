@@ -2,35 +2,36 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 class="text-center fw-bold fst-italic text-uppercase mb-5">Market</h3>
-    <div class="container">
-
-        <div class="row">
-       
+    <div class="hero">
+    <h1 class="text-center fw-bold fst-italic text-uppercase mb-5">GlowLab Shop</h1>
+        </div>
+    <div class="row">
             <asp:Repeater ID="RepeaterBackoffice" runat="server">
                 <ItemTemplate>
-                    <div class="col-3 mb-3">
-                        <div class="card h-100">
-                            <div class="d-flex flex-column">
-                                <div class="d-flex">
-                                    <img style="width: 100px; height: 150px;" src='<%# Eval("Immagine") %>' class="card-img-top" alt='<%# Eval("Nome") %>' />
-                                    <div class="card-body">
-                                        <h5 class="card-title fw-bold"><%# Eval("Nome") %></h5>
-                                        <p class="card-text"><%# Eval("Dettagli") %></p>
-                                        <p class="card-text fw-bold fs-3"><%# Eval("Prezzo") %></p>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-around align-items-center p-3">
-                                    <asp:Button ID="AcquistaBtnHome" runat="server" Text="Aggiungi al carrello" CommandArgument='<%# Eval("Id") %>' OnClick="AddToCart" class="btn btn-success" />
-                                    <a href='<%# "Dettaglio.aspx?product=" + Eval("Id") %>' class="btn btn-success">Dettaglio</a>
+                    <div class="cardContainer col-4">
+                        <div class="card">
+                            <div class="image-container">
+                                <img src='<%# Eval("Immagine") %>' alt='<%# Eval("Nome") %>' />
+                                <div class="overlay">
+                                    <a
+                                        href='<%# "Dettaglio.aspx?product=" + Eval("Id") %>'>Dettagli</a>
                                 </div>
                             </div>
+                            <div class="cardBody">
+                                <h5><%# Eval("Nome") %></h5>
+                                <p><%# Eval("Prezzo") %>&euro;</p>
+                            </div>
+
+                            <asp:Button ID="AcquistaBtnHome" runat="server" Text="Aggiungi al carrello" CommandArgument='<%# Eval("Id") %>' OnClick="AddToCart" class="btnGlowLab" />
                         </div>
                     </div>
+
+
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-    </div>
 </asp:Content>

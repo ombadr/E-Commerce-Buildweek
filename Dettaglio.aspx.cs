@@ -12,7 +12,7 @@ namespace E_Commerce_Epicode_Buildweek
     public partial class Dettaglio : System.Web.UI.Page
     {
         private string ProductId;
-        private static string connectionString = ConfigurationManager.ConnectionStrings["Ecommerce"].ToString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["product"] == null)
@@ -35,6 +35,7 @@ namespace E_Commerce_Epicode_Buildweek
                             ttlProdotto.InnerText = dataReader["Nome"].ToString();
                             img.Src = dataReader["Immagine"].ToString();
                             txtDescrizione.InnerText = dataReader["Descrizione"].ToString();
+                            txtDettagli.InnerText = dataReader["Dettagli"].ToString();
                             txtPrezzo.InnerText = dataReader["Prezzo"].ToString() + "€";
                         }
                     }
@@ -49,15 +50,9 @@ namespace E_Commerce_Epicode_Buildweek
         protected void btnAcquista_Click(object sender, EventArgs e)
         {
             int prodId = int.Parse(ProductId);
-            List<int> products = (Session["ProductID"] ?? new List<int>()) as List<int>;
             int quantity = int.Parse(QuantitaTextBox.Text);
-
-            for (int i = 0; i < quantity; i++)
-            {
-                products.Add(prodId);
-            }
-
-            Session["ProductID"] = products;
+            HomePage.products.Add(new Quantity(prodId, quantity));
+            Session["ProductID"] = HomePage.products;
             ClientScript.RegisterClientScriptBlock(this.GetType(), "Alert", "<script>alert('Prodotti aggiunti');</script>");
             QuantitaTextBox.Text = "1";
         }
