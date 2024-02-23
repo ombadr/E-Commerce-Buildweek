@@ -94,6 +94,7 @@ namespace BuildWeekMattia
             SqlCommand sql = new SqlCommand($"INSERT INTO Prodotto (Descrizione,Dettagli,Prezzo,Nome,Immagine) VALUES ('{desc}','{dett}','{prez}','{nome}','{immagine}')", conn);
             sql.ExecuteNonQuery();
             conn.Close();
+            Response.Redirect(Request.Url.AbsoluteUri);
         }
     }
 }

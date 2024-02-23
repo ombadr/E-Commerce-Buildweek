@@ -66,7 +66,7 @@ namespace BuildWeekMattia
             }
 
           
-            LiteralControl totalCart = new LiteralControl($"<div><p>Totale Carrello:{totcarrello}</p></div>");
+            LiteralControl totalCart = new LiteralControl($"<div><p>Totale Carrello:{totcarrello}&euro;</p></div>");
             Panel1.Controls.Add(totalCart);
 
       
